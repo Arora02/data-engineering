@@ -69,36 +69,40 @@ Here's the specific cleaning and transformation tasks that were performed:
 
 Link to the script: [https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Uber%20Data%20Engineering.ipynb](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Uber%20Data%20Engineering.ipynb)
 
-<img width="1436" alt="image" src="https://github.com/katiehuangx/data-engineering/assets/81607668/83438f14-cae0-4278-8a33-5b536b487d90">
+![image](https://github.com/user-attachments/assets/38d5ac58-0337-423c-ae88-6d1c2086a66e)
+
 
 After completing the above steps, I created the following fact and dimension tables below:
 
-<img width="1436" alt="Screenshot 2023-09-03 at 4 05 21 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/d1f961f5-dd28-4a5f-bfc9-1d739b85012c">
+![image](https://github.com/user-attachments/assets/d671f164-e8e4-4e33-a7ad-8287baa1ff94)
 
 
-<img width="1436" alt="Screenshot 2023-09-03 at 4 05 29 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/3265a206-132f-457f-8323-2c6f681fbf60">
+![image](https://github.com/user-attachments/assets/f3405add-ceb9-42e5-9d52-039f5860bca1)
 
 
-<img width="1436" alt="Screenshot 2023-09-03 at 4 05 35 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/a0555798-32a7-4c84-ac19-6336868dbf70">
+![image](https://github.com/user-attachments/assets/253431e6-4bf4-4407-a925-58fa226e0fef)
 
 
-<img width="1436" alt="Screenshot 2023-09-03 at 4 05 40 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/f7483917-b5eb-400f-a9ea-8ca138db6604">
+![image](https://github.com/user-attachments/assets/5e61a974-074c-4ab0-b382-d35b3820875e)
 
 
-<img width="1436" alt="Screenshot 2023-09-03 at 4 05 44 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/31fc871f-bdd3-4d2b-a0b5-04227188ec66">
+![image](https://github.com/user-attachments/assets/a9352b27-b1a8-41cc-aacf-fc9b26d5f655)
 
 
-<img width="1436" alt="Screenshot 2023-09-03 at 4 05 53 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/ec020455-bb23-4be5-b3f9-92200ccebaae">
+![image](https://github.com/user-attachments/assets/134d2b39-2dc6-4c62-a634-fe2b2464baad)
+
 
 ## Step 2: Storage
 
-<img width="1436" alt="image" src="https://github.com/katiehuangx/data-engineering/assets/81607668/b776b804-a871-4a72-b1e5-b38b6d194bf3">
+![image](https://github.com/user-attachments/assets/06ade8c1-12d0-4669-9455-a14a108cd138)
+
 
 ## Step 3: ETL / Orchestration
 
 1. Begin by launching the SSH instance and running the following commands below to install the required libraries.
 
-<img width="1436" alt="Screenshot 2023-09-03 at 4 10 39 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/1bd9af4c-61aa-4ea5-a485-81b6a6b5d446">
+![image](https://github.com/user-attachments/assets/515aa03a-7ae4-4de8-a9db-c437c14ba903)
+
 
 ```python
 # Install python and pip 
@@ -123,8 +127,6 @@ sudo pip3 install google-cloud-bigquery
 sudo pip3 install pandas
 ```
 
-<img width="1436" alt="image" src="https://github.com/katiehuangx/data-engineering/assets/81607668/3ce67bf1-b965-428e-8412-1efd3ce0c95f">
-
 2. After that, I install the Mage AI library from the [Mage AI GitHub](https://github.com/mage-ai/mage-ai#using-pip-or-conda). Then, I create a new project called "uber_de_project".
 
 ```python 
@@ -135,8 +137,6 @@ sudo pip3 install mage-ai
 mage start demo_project
 ```
 
-<img width="901" alt="Screenshot 2023-09-03 at 3 43 27 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/2cfbdda6-4998-4dff-8c09-2f76c9b8a977">
-
 3. Next, I conduct orchestration in Mage by accessing the external IP address through a new tab. The link format is: `<external IP address>:<port number>`.
 
 After that, I create a new pipeline with the following stages:
@@ -144,7 +144,8 @@ After that, I create a new pipeline with the following stages:
 - Transform: [transform_uber](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_transformation.py)
 - Load: [load_gbq](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_load_data.py)
 
-<img width="1438" alt="image" src="https://github.com/katiehuangx/data-engineering/assets/81607668/ae8acb39-c66e-41f6-b81b-d1179121c0a4">
+![image](https://github.com/user-attachments/assets/2851f833-2764-4bc0-8e79-11ac682d440a)
+
 
 Before executing the Load pipeline, I download credentials from Google API & Credentials and then update them accordingly in the `io_config.yaml` file within the same pipeline. This step is essential for granting authorization to access and load data into Google BigQuery.
 
@@ -152,17 +153,18 @@ Before executing the Load pipeline, I download credentials from Google API & Cre
 
 After running the Load pipeline in Mage, the fact and dim tables are generated in Google BigQuery.
 
-<img width="1438" alt="Screenshot 2023-09-03 at 3 41 57 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/81106f7c-f912-462a-ba74-4b1e22120dc6">
+![image](https://github.com/user-attachments/assets/0c8145af-2ea7-4ee1-b805-b020578dc1c7)
 
 Here's the additional analyses I performed:
 1. Find the top 10 pickup locations based on the number of trips
-<img width="1436" alt="Screenshot 2023-09-03 at 3 46 17 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/87fef0c1-f849-4b0e-8f2d-db68a989a06d">
+![image](https://github.com/user-attachments/assets/f93e179c-1b02-4a9b-9c87-550d97fc3a64)
 
 2. Find the total number of trips by passenger count:
-<img width="1436" alt="Screenshot 2023-09-03 at 3 47 48 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/5f563142-9d18-4019-8499-7d9958b7ec05">
+![image](https://github.com/user-attachments/assets/be0b97de-0703-432f-aa65-80f5a9ab6e93)
 
 3. Find the average fare amount by hour of the day:
-<img width="1436" alt="Screenshot 2023-09-03 at 3 48 52 PM" src="https://github.com/katiehuangx/data-engineering/assets/81607668/bf8d4dea-0915-48fb-a673-e5b3d3f37e3f">
+![image](https://github.com/user-attachments/assets/d5497b25-eac8-43b4-8dd2-88c04ab95c7e)
+
 
 ## Step 5: Dashboard
 
