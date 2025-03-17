@@ -49,7 +49,7 @@ The following technologies are used to build this project:
 Files in the following stages:
 - Step 1: Cleaning and transformation - [Uber Data Engineering.ipynb](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Uber%20Data%20Engineering.ipynb)
 - Step 2: Storage
-- Step 3: ETL, Orchestration - Mage: [Extract](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_load_data.py), [Transform](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_transformation.py), [Load](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Mage/uber_gbq_load.py)
+- Step 3: ETL, Orchestration - Mage: [Extract](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_load_data.py), [Transform](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_transformation.py), [Load](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_gbq_load.py)
 - Step 4: Analytics - [SQL script](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/sql_script.sql)
 - Step 5: [Dashboard](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Uber_Dashboard.pdf)
 
