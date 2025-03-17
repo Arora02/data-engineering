@@ -31,7 +31,7 @@ This project uses the TLC Trip Record Data which include fields capturing pick-u
 More info about dataset can be found in the following links:
 - Website: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 - Data Dictionary: https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf
-- Raw Data (CSV): https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/uber_data.csv
+- Raw Data (CSV): https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/uber_data.csv
 
 ## Technologies
 
@@ -47,11 +47,11 @@ The following technologies are used to build this project:
 <img width="897" alt="Screenshot 2023-05-08 at 11 49 09 AM" src="https://user-images.githubusercontent.com/81607668/236729698-65e193bc-75ee-4ea6-9040-f33f5f2958cb.png">
 
 Files in the following stages:
-- Step 1: Cleaning and transformation - [Uber Data Engineering.ipynb](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Uber%20Data%20Engineering.ipynb)
+- Step 1: Cleaning and transformation - [Uber Data Engineering.ipynb](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Uber%20Data%20Engineering.ipynb)
 - Step 2: Storage
-- Step 3: ETL, Orchestration - Mage: [Extract](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Mage/uber_load_data.py), [Transform](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Mage/uber_transformation.py), [Load](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Mage/uber_gbq_load.py)
-- Step 4: Analytics - [SQL script](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/sql_script.sql)
-- Step 5: [Dashboard](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Uber_Dashboard.pdf)
+- Step 3: ETL, Orchestration - Mage: [Extract](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Mage/uber_load_data.py), [Transform](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_transformation.py), [Load](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Mage/uber_gbq_load.py)
+- Step 4: Analytics - [SQL script](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/sql_script.sql)
+- Step 5: [Dashboard](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Uber_Dashboard.pdf)
 
 ## Data Modeling
 
@@ -67,7 +67,7 @@ Here's the specific cleaning and transformation tasks that were performed:
 1. Converted `tpep_pickup_datetime` and `tpep_dropoff_datetime` columns into datetime format.
 2. Removed duplicates and reset the index.
 
-Link to the script: [https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Uber%20Data%20Engineering.ipynb](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Uber%20Data%20Engineering.ipynb)
+Link to the script: [https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Uber%20Data%20Engineering.ipynb](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Uber%20Data%20Engineering.ipynb)
 
 <img width="1436" alt="image" src="https://github.com/katiehuangx/data-engineering/assets/81607668/83438f14-cae0-4278-8a33-5b536b487d90">
 
@@ -140,9 +140,9 @@ mage start demo_project
 3. Next, I conduct orchestration in Mage by accessing the external IP address through a new tab. The link format is: `<external IP address>:<port number>`.
 
 After that, I create a new pipeline with the following stages:
-- Extract: [load_uber_data](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Mage/uber_load_data.py)
-- Transform: [transform_uber](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Mage/uber_transformation.py)
-- Load: [load_gbq](https://github.com/katiehuangx/data-engineering/blob/main/Uber%20Project/Mage/uber_load_data.py)
+- Extract: [load_uber_data](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_load_data.py)
+- Transform: [transform_uber](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_transformation.py)
+- Load: [load_gbq](https://github.com/Arora02/data-engineering/blob/main/Uber%20Project/Mage/uber_load_data.py)
 
 <img width="1438" alt="image" src="https://github.com/katiehuangx/data-engineering/assets/81607668/ae8acb39-c66e-41f6-b81b-d1179121c0a4">
 
